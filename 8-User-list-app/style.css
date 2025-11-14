@@ -5,10 +5,47 @@ font-family: Arial, sans-serif;
   padding: 20px; 
   text-align: center; 
 } 
- 
-h1 { 
+
+:root {
+  --primary-bg-color: #688;
+  --primary-color: #333; 
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
+.heading h1 { 
   color: #333; 
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  background-color: white; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+  padding: 15px; 
+  width: 150px; 
+}
+
+.search-bar, .sort-dropdown { 
+  width: 80%; 
+  max-width: 400px; 
+  padding: 10px 15px; 
+  margin: 10px; 
+  font-size: 16px; 
+  border-radius: 8px; 
+  border: 1px solid #ccc; 
+  outline: none; 
+} 
+ 
+.search-bar:focus, 
+.sort-dropdown:focus { 
+  border-color: #007bff; 
+} 
+ 
+.user-count { 
+  margin-top: 10px; 
+  font-size: 16px; 
+  color: #444; 
 }
 
 .user-container { 
@@ -34,11 +71,6 @@ h1 {
 .user-card h3 { 
   margin: 10px 0 5px; 
   color: #2c3e50; 
-} 
- 
-.user-card p { 
-  margin: 5px 0; 
-  color: #555; 
 }
 
 .hidden { 
@@ -48,4 +80,16 @@ h1 {
 #error { 
   color: red; 
   margin-bottom: 20px; 
+}
+
+#mode{
+  padding: 5px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.filter{
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
 }
