@@ -124,15 +124,24 @@ fetchUsers();
 
 // To change mode 
 let modeBtn = document.querySelector('#mode');
+let currMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+console.log('initial mode', currMode);
+function setTheme(mode){
+  if(mode === 'dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+    if(modeBtn) modeBtn.textContent = 'Switch to Light';
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    if(modeBtn) modeBtn.textContent = 'Switch to Dark';
+  }
+  currMode = mode;
+}
 
-let currMode = "light";
+if (modeBtn) {
+  modeBtn.addEventListener('click', () => {
+    setTheme(currMode === 'light' ? 'dark' : 'light');
+  });
+}
 
-modeBtn.addEventListener("click", () =>{
-    if(currMode==="light"){
-        currMode = "dark";
-        document.querySelector("body").style.backgroundColor = "#333";
-    } else{
-        currMode = "light";
-        document.querySelector("body").style.backgroundColor = "white";
-    }
-})
+// initialize theme button text/attribute
+setTheme(currMode);
