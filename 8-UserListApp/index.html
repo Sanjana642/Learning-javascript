@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User List App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- heading -->
+    <div class="heading">
+      <h1>User List</h1>
+    </div>
+
+    <!-- search -->
+    <input
+      type="text"
+      id="search-input"
+      class="search-bar"
+      placeholder="Search by name /email /city"
+    />
+
+    <!-- sort -->
+    <select id="sort-select" class="sort-dropdown">
+      <option value="default">Sort By</option>
+      <option value="az">Name: A–Z</option>
+      <option value="za">Name: Z–A</option>
+    </select>
+
+    <!-- to change mode -->
+    <button id="mode">Change mode</button>
+
+    <!-- User count -->
+    <div id="user-count" class="user-count"></div>
+
+    <div id="loading">Loading Users...</div>
+
+    <div id="error" class="hidden">
+      Something went wrong! Please try again later...
+    </div>
+
+    <div id="no-results" class="hidden">No results found.</div>
+
+    <div id="user-container" class="user-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
