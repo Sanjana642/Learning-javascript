@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>🍽 Recipe Finder</h1> 
+
+    <!-- search input -->
+    <input type="text" id="search-input" class="search-bar" placeholder="Search recipes by name...">
+
+    <!-- Category filter dropdown -->
+    <select id="category-select" class="dropdown">
+    <option value="all">All categories</option>
+    </select>
+
+    <!-- status messages -->
+    <div id="loading">Loading recipes...</div>
+    <div id="error" class="hidden">Something went wrong! Please try again later...</div>
+    <div id="no-results" class="hidden">No recipes found</div>
+
+    <!-- Recipe Card Container -->
+    <div id="recipe-container" class="recipe-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
