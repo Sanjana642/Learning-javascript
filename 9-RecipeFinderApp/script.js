@@ -48,11 +48,11 @@ async function fetchRecipes(searchTerm = "") {
     loadingText.classList.add("hidden");
 
     //If no recipes found
-    if(!data.meals){           // if condition false
-        allRecipes = [];
-        renderRecipes();
-        return;
-    }
+    // if(!data.meals){           // if condition false
+    //     allRecipes = [];
+    //     renderRecipes();        //card 
+    //     return;
+    // }
     allRecipes = data.meals;  // else condition true
     applyFilters();
 
@@ -93,7 +93,8 @@ function renderRecipes(recipes = allRecipes){
         card.innerHTML = `
         <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
         <h3>${recipe.strMeal}</h3>
-        <p><strong>Category : </strong>${recipe.strCategory}</p>`;
+        <p><strong>Category : </strong>${recipe.strCategory}</p>
+        <a href="recipe.html">View Recipe</a>`;
 
         recipeContainer.appendChild(card);
     });

@@ -21,6 +21,8 @@ h1 {
   border: 1px solid #ccc; 
   outline: none; 
 } 
+
+.search-bar:focus, .dropdown:focus { border-color: #007bff; }
  
 .recipe-container { 
   margin-top: 25px; 
@@ -35,18 +37,15 @@ h1 {
   border-radius: 12px; 
   padding: 15px; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-  transition: transform .2s; 
+  transition: transform .12s; 
 } 
- 
 .recipe-card:hover { 
   transform: scale(1.02); 
 } 
- 
 .recipe-card img { 
   width: 100%; 
   border-radius: 10px; 
 } 
- 
 .recipe-card h3 { 
   margin: 10px 0 5px; 
   color: #333; 
@@ -59,4 +58,32 @@ h1 {
 #error { 
   color: red; 
   margin-top: 10px; 
+}
+
+#recipe-detail { 
+  text-align: left;
+  max-width: 700px; 
+  margin: 20px auto; 
+}
+#recipe-detail img { 
+  width: 100%; 
+  border-radius: 10px; 
+  margin-bottom: 15px; 
+}
+#recipe-detail h2 { 
+  margin-bottom: 10px; 
+}
+#recipe-detail ul { 
+  line-height: 1.6; 
+}
+ 
+#back-btn {
+ margin: 10px;
+ padding: 8px 14px;
+ font-size: 14px;
+ border: none;
+ border-radius: 6px;
+ background-color: #007bff;
+ color: white;
+ cursor: pointer;
 }
