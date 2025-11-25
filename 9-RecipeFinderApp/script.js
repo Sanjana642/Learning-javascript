@@ -94,7 +94,8 @@ function renderRecipes(recipes = allRecipes){
         <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
         <h3>${recipe.strMeal}</h3>
         <p><strong>Category : </strong>${recipe.strCategory}</p>
-        <a href="recipe.html">View Recipe</a>`;
+        
+        <a href="recipe.html?id=${recipe.idMeal}"> View Recipe </a>`;
 
         recipeContainer.appendChild(card);
     });

@@ -38,7 +38,7 @@ async function fetchRecipeDetail() {
 
         const data = await res.json();
 
-        const meal = data.meal[0];             //fetch recipes - 0th index 
+        const meal = data.meals[0];      //fetch recipes - 0th index -data.meals 
         console.log(meal);
         
         loadingText.classList.add("hidden");
@@ -53,7 +53,7 @@ async function fetchRecipeDetail() {
     } catch (error){
         loadingText.classList.add("hidden");
         errorText.classList.remove("hidden");
-        console.error(err);
+        console.error(error);
     }
 }
 
@@ -77,7 +77,7 @@ function displayRecipe(meal){
     recipeDetailDiv.classList.remove("hidden");
 
     const ingredientsList = getIngredients(meal)
-    .map(item => `<li>${item}<li>`)    //ingredient-measure, -> in list
+    .map(item => `<li>${item}</li>`)    //ingredient-measure, -> in list
     .join("");                        // ingredient-measure -> "," = .join("")
 
     recipeDetailDiv.innerHTML = `<h2>${meal.strMeal}</h2>
